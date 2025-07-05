@@ -1,4 +1,4 @@
-## BGP MESSAGEs
+## BGP MESSAGES
  - Variable length from 19 to 4096 bytes 
 ```
 	+-------------------------------+-------------+
