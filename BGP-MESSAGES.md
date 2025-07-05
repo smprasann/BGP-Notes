@@ -43,3 +43,41 @@
   - 3 = NOTIFICATION
   - 4 = KEEPALIVE
   - 5 = ROUTE REFRESH 
+
+# OPEN MESSAGE 
+
+```
+0                   1                   2                   3    
+0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1  
++-+-+-+-+-+-+-+-+                                                
+|    Version    |                                                
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+                                
+|     My Autonomous System      |                                
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+                                
+|           Hold Time           |                                
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                         BGP Identifier                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Opt Parm Len  |                                                
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
+|             Optional Parameters (variable)                    |
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+|+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                              
+```
+- Version : Specifies the BGP Version
+- My Autonomous System :
+  - Original 4 Bytes
+  - Extended 8 Bytes
+  - AS number of the orginating router
+```
+
+                                                              
+  0                   1                                          
+  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5                                
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...                    
+  |  Parm. Type   | Parm. Length  |  Parameter Value (variable)  
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-...                    
+```
+
